@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance Form</title>
+</head>
+<body>
+    <h1>Attendance Form</h1>
+    <form action="/take_attendance" method="POST">
+        <label for="class">Select Class:</label>
+        <select id="class" name="class">
+            <option value="Class A">Class A</option>
+            <option value="Class B">Class B</option>
+            <option value="Class C">Class C</option>
+        </select><br>
+
+        <label for="period">Select Period:</label>
+        <select id="period" name="period">
+            <option value="Period 1">Period 1</option>
+            <option value="Period 2">Period 2</option>
+            <option value="Period 3">Period 3</option>
+        </select><br>
+
+        <input type="submit" value="Take Attendance">
+    </form>
+</body>
+</html>
