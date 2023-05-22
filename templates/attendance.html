@@ -2,25 +2,90 @@
 <html>
 <head>
     <title>Attendance Form</title>
+    <link rel="stylesheet" href="static/attendance.css">
 </head>
 <body>
-    <h1>Attendance Form</h1>
-    <form action="/take_attendance" method="POST">
-        <label for="class">Select Class:</label>
-        <select id="class" name="class">
-            <option value="Class A">Class A</option>
-            <option value="Class B">Class B</option>
-            <option value="Class C">Class C</option>
-        </select><br>
+    <div class="form-container">
+        <div class="left-form">
+            <h1>Attendance Form</h1>
+            <form action="/take_attendance" method="POST" class="horizontal-form">
+        <div>
+            <label for="class">Select Class:</label>
+            <select id="class" name="class">
+                <option value="Class A">Class A</option>
+                <option value="Class B">Class B</option>
+                <option value="Class C">Class C</option>
+            </select>
+        </div>
+        <div>
+            <label for="year">Select Year:</label>
+            <select id="year" name="year">
+                <option value="Year 1">Year 1</option>
+                <option value="Year 2">Year 2</option>
+                <option value="Year 3">Year 3</option>
+                <option value="Year 4">Year 4</option>
+            </select>
+        </div>
+        <div>
+            <label for="period">Select Period:</label>
+            <select id="period" name="period">
+                <option value="Period 1">Period 1</option>
+                <option value="Period 2">Period 2</option>
+                <option value="Period 3">Period 3</option>
+                <option value="Period 3">Period 4</option>
+                <option value="Period 3">Period 5</option>
+                <option value="Period 3">Period 6</option>
+                <option value="Period 3">Period 7</option>
+            </select>
+        </div>
+        <div>
+            <input type="submit" value="Take Attendance">
+        </div>
+            </form>
+        </div>
 
-        <label for="period">Select Period:</label>
-        <select id="period" name="period">
-            <option value="Period 1">Period 1</option>
-            <option value="Period 2">Period 2</option>
-            <option value="Period 3">Period 3</option>
-        </select><br>
-
-        <input type="submit" value="Take Attendance">
+    <form action="/logout" method="GET" class="logout-form">
+        <input type="submit" value="Logout">
     </form>
+
+    <div class="right-form">
+        <h1>Search Attendance</h1>
+        <form action="/search_attendance" method="POST" class="horizontal-form2">
+            <div>
+                <label for="class-search">Select Class:</label>
+                <select id="class-search" name="class">
+                    <option value="Class A">Class A</option>
+                    <option value="Class B">Class B</option>
+                    <option value="Class C">Class C</option>
+                </select>
+            </div>
+            <div>
+                <label for="year-search">Select Year:</label>
+                <select id="year-search" name="year">
+                    <option value="Year 1">Year 1</option>
+                    <option value="Year 2">Year 2</option>
+                    <option value="Year 3">Year 3</option>
+                    <option value="Year 4">Year 4</option>
+                </select>
+            </div>
+            <div>
+                <label for="period">Select Period:</label>
+                <select id="period" name="period">
+                    <option value="Period 1">Period 1</option>
+                    <option value="Period 2">Period 2</option>
+                    <option value="Period 3">Period 3</option>
+                    <option value="Period 3">Period 4</option>
+                    <option value="Period 3">Period 5</option>
+                    <option value="Period 3">Period 6</option>
+                    <option value="Period 3">Period 7</option>
+                </select>
+            </div>
+            <div>
+                <input type="submit" value="Search">
+            </div>
+        </form>
+    </div>
+</div>
+
 </body>
 </html>

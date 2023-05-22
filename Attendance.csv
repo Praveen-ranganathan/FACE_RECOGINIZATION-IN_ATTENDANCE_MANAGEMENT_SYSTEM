@@ -1,4 +1,7 @@
-Name,Time,Date
+Class,Period,Name,Time,Date
 
 Class C,Period 1,PRAVEEN,21:37:15,20/05/2023
 Class C,Period 1,PRASANNA,21:37:15,20/05/2023
+Class B,Period 2,NITESH,15:26:32,21/05/2023
+Class B,Period 2,PRAVEEN,15:26:33,21/05/2023
+Class B,Period 2,CHUTTY,15:26:57,21/05/2023
