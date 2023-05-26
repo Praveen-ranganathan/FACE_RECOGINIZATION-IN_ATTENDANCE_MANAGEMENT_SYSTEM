@@ -129,6 +129,12 @@ def take_attendance():
                     markAttendance(class_name, period, name)
                     attendance_marked.append(name)
 
+                # Draw a rectangle around the face
+                top, right, bottom, left = [coord * 4 for coord in faceLoc]
+                cv2.rectangle(img, (left, top), (right, bottom), (0, 255, 0), 2)
+                cv2.rectangle(img, (left, bottom - 35), (right, bottom), (0, 255, 0), cv2.FILLED)
+                cv2.putText(img, name, (left + 6, bottom - 6), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
+
         cv2.imshow('Webcam', img)
         if cv2.waitKey(1) == 13:  # Press Enter key to stop capturing attendance
             break
